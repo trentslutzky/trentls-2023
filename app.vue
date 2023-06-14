@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a href="/">
-    <h1 id="sitetitle">trent slutzky</h1>
-    </a>
+    <NuxtLink to="/">
+      <h1 id="sitetitle">trent slutzky</h1>
+    </NuxtLink>
     <div style="display: inline-flex; gap: 0.5em;">
       <SocialIconLink iconName="mdi:github-box" link="https://github.com/trentslutzky"/>
       <SocialIconLink iconName="mdi:linkedin" link="https://www.linkedin.com/in/tlslutzky/"/>
@@ -12,8 +12,18 @@
   </div>
 </template>
 
-<style>
+<script setup lang="ts">
+useHead({
+  title: 'trent slutzky',
+  meta: [
+    { name: 'description', content: 'trent slutzky' }
+  ],
+})
+</script>
 
+
+
+<style>
 :root {
   --bg: #0C1316;
   --bg1: #14232A;
@@ -91,7 +101,7 @@ h2 {
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 300ms;
+  transition: all 200ms;
 }
 
 .page-enter-from,
